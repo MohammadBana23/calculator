@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,41 +9,48 @@
     <link rel="stylesheet" href="style.css">
     <script src="main.js"></script>
 </head>
+
 <body>
     <div class="container">
-        <input type="text" name="txt" id="calc"><br>
+        <table border="1" cellspacing="0">
+            <tr>
+                <td colspan="4" id="inputLabel">10</td>
+            </tr>
+            <tr>
+                <td colspan="3"><button onclick="clearInput()">AC</button></td>
 
-    <span onclick="alert('hello')" class="items">^</span>
-    <span onclick="alert('hello')" class="items">c</span>
-    <span onclick="alert('hello')" class="items">A</span>
-    <span onclick="alert('hello')" class="items">+</span><br>
-
-    <span onclick="alert('hello')" class="items">1</span>
-    <span onclick="alert('hello')" class="items">2</span>
-    <span onclick="alert('hello')" class="items">3</span>
-    <span onclick="alert('hello')" class="items">-</span><br>
-    
-
-    <span onclick="alert('hello')" class="items">4</span>
-    <span onclick="alert('hello')" class="items">5</span>
-    <span onclick="alert('hello')" class="items">6</span>
-    <span onclick="alert('hello')" class="items">*</span><br>
-    
-
-    <span onclick="alert('hello')" class="items">7</span>
-    <span onclick="alert('hello')" class="items">8</span>
-    <span onclick="alert('hello')" class="items">9</span>
-    <span onclick="alert('hello')" class="items">/</span><br>
-    
-
-    <span onclick="alert('hello')" class="items">00</span>
-    <span onclick="alert('hello')" class="items">0</span>
-    <span onclick="alert('hello')" class="items">.</span>
-    <span onclick="alert('hello')" class="items">=</span>
+                <td><button onclick="writeNumber()">/</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="">7</button></td>
+                <td><button onclick="">8</button></td>
+                <td><button onclick="">9</button></td>
+                <td><button onclick="">*</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="">4</button></td>
+                <td><button onclick="">5</button></td>
+                <td><button onclick="">6</button></td>
+                <td><button onclick="">-</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="">1</button></td>
+                <td><button onclick="">2</button></td>
+                <td><button onclick="">3</button></td>
+                <td><button onclick="">+</button></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button onclick="">0</button></td>
+                <td><button onclick="">.</button></td>
+                <td><button onclick="">=</button></td>
+                <!-- <td><button onclick="">+</button></td> -->
+            </tr>
+        </table>
     </div>
-    
-    
-    
-   
+
+
+
+
 </body>
+
 </html>
