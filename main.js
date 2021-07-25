@@ -106,7 +106,7 @@ function buttonDiv() {
     if(lastChild == "/"){
         inputLabel.innerHTML = inputLabel.innerHTML;
     }else{
-        inputLabel.innerHTML += buttonMulti;
+        inputLabel.innerHTML += buttonDiv;
     }
 }
 function buttonAssign() {
