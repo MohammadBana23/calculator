@@ -34,7 +34,8 @@ button {
 }
 
 #inputLabel {
-    direction: rtl;
+    direction: ltr;
+    text-align: right;
     height: 100px;
     font-size: 50px;
     vertical-align: bottom;

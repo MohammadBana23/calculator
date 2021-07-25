@@ -22,7 +22,13 @@ function button9() {
 function buttonMulti() {
     let buttonMulti = document.getElementsByTagName('button')[5].innerHTML;
     let inputLabel = document.getElementById("inputLabel");
-    inputLabel.innerHTML += buttonMulti;
+    let inputLength = inputLabel.innerHTML.length;
+    let lastChild = inputLabel.innerHTML.charAt(inputLength - 1);
+    if(lastChild == "*"){
+        inputLabel.innerHTML = inputLabel.innerHTML;
+    }else{
+        inputLabel.innerHTML += buttonMulti;
+    }
 }
 function button4() {
     let button4 = document.getElementsByTagName('button')[6].innerHTML;
@@ -42,7 +48,13 @@ function button6() {
 function buttonMin() {
     let buttonMin = document.getElementsByTagName('button')[9].innerHTML;
     let inputLabel = document.getElementById("inputLabel");
-    inputLabel.innerHTML += buttonMin;
+    let inputLength = inputLabel.innerHTML.length;
+    let lastChild = inputLabel.innerHTML.charAt(inputLength - 1);
+    if(lastChild == "-"){
+        inputLabel.innerHTML = inputLabel.innerHTML;
+    }else{
+        inputLabel.innerHTML += buttonMin;
+    }
 }
 function button1() {
     let button1 = document.getElementsByTagName('button')[10].innerHTML;
@@ -62,7 +74,13 @@ function button3() {
 function buttonPlus() {
     let buttonPlus = document.getElementsByTagName('button')[13].innerHTML;
     let inputLabel = document.getElementById("inputLabel");
-    inputLabel.innerHTML += buttonPlus;
+    let inputLength = inputLabel.innerHTML.length;
+    let lastChild = inputLabel.innerHTML.charAt(inputLength - 1);
+    if(lastChild == "+"){
+        inputLabel.innerHTML = inputLabel.innerHTML;
+    }else{
+        inputLabel.innerHTML += buttonPlus;
+    }
 }
 function button0() {
     let button0 = document.getElementsByTagName('button')[14].innerHTML;
@@ -72,14 +90,30 @@ function button0() {
 function buttonDot() {
     let buttonDot = document.getElementsByTagName('button')[15].innerHTML;
     let inputLabel = document.getElementById("inputLabel");
-    inputLabel.innerHTML += buttonDot;
+    let inputLength = inputLabel.innerHTML.length;
+    let lastChild = inputLabel.innerHTML.charAt(inputLength - 1);
+    if(lastChild == "."){
+        inputLabel.innerHTML = inputLabel.innerHTML;
+    }else{
+        inputLabel.innerHTML += buttonDot;
+    }
 }
 function buttonDiv() {
     let buttonDiv = document.getElementsByTagName('button')[1].innerHTML;
     let inputLabel = document.getElementById("inputLabel");
-    inputLabel.innerHTML += buttonDiv;
+    let inputLength = inputLabel.innerHTML.length;
+    let lastChild = inputLabel.innerHTML.charAt(inputLength - 1);
+    if(lastChild == "/"){
+        inputLabel.innerHTML = inputLabel.innerHTML;
+    }else{
+        inputLabel.innerHTML += buttonMulti;
+    }
 }
 function buttonAssign() {
     let inputLabel = document.getElementById("inputLabel");
-    inputLabel.innerHTML = eval(inputLabel.innerHTML);
+    if(inputLabel.innerHTML == "") {
+        inputLabel.innerHTML = "";
+    }else{
+        inputLabel.innerHTML = eval(inputLabel.innerHTML);
+    }
 }
