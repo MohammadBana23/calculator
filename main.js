@@ -24,9 +24,22 @@ function buttonMulti() {
     let inputLabel = document.getElementById("inputLabel");
     let inputLength = inputLabel.innerHTML.length;
     let lastChild = inputLabel.innerHTML.charAt(inputLength - 1);
-    if(lastChild == "*"){
+    if (inputLabel.innerHTML == "") {
+        inputLabel.innerHTML = "";
+    } else if (lastChild == "*") {
         inputLabel.innerHTML = inputLabel.innerHTML;
-    }else{
+    } else if (lastChild == "-") {
+        let DelString = inputLabel.innerHTML.substring(0, inputLength - 1);
+        inputLabel.innerHTML = DelString + buttonMulti;
+    } else if (lastChild == "+") {
+        let DelString = inputLabel.innerHTML.substring(0, inputLength - 1);
+        inputLabel.innerHTML = DelString + buttonMulti;
+    } else if (lastChild == "/") {
+        let DelString = inputLabel.innerHTML.substring(0, inputLength - 1);
+        inputLabel.innerHTML = DelString + buttonMulti;
+    } else if (lastChild == ".") {
+        inputLabel.innerHTML = inputLabel.innerHTML;
+    } else {
         inputLabel.innerHTML += buttonMulti;
     }
 }
@@ -50,11 +63,25 @@ function buttonMin() {
     let inputLabel = document.getElementById("inputLabel");
     let inputLength = inputLabel.innerHTML.length;
     let lastChild = inputLabel.innerHTML.charAt(inputLength - 1);
-    if(lastChild == "-"){
+    if (inputLabel.innerHTML == "") {
+        inputLabel.innerHTML = "";
+    } else if (lastChild == "-") {
         inputLabel.innerHTML = inputLabel.innerHTML;
-    }else{
+    } else if (lastChild == "*") {
+        let DelString = inputLabel.innerHTML.substring(0, inputLength - 1);
+        inputLabel.innerHTML = DelString + buttonMin;
+    } else if (lastChild == "+") {
+        let DelString = inputLabel.innerHTML.substring(0, inputLength - 1);
+        inputLabel.innerHTML = DelString + buttonMin;
+    } else if (lastChild == "/") {
+        let DelString = inputLabel.innerHTML.substring(0, inputLength - 1);
+        inputLabel.innerHTML = DelString + buttonMin;
+    } else if (lastChild == ".") {
+        inputLabel.innerHTML = inputLabel.innerHTML;
+    } else {
         inputLabel.innerHTML += buttonMin;
     }
+
 }
 function button1() {
     let button1 = document.getElementsByTagName('button')[11].innerHTML;
@@ -76,9 +103,22 @@ function buttonPlus() {
     let inputLabel = document.getElementById("inputLabel");
     let inputLength = inputLabel.innerHTML.length;
     let lastChild = inputLabel.innerHTML.charAt(inputLength - 1);
-    if(lastChild == "+"){
+    if (inputLabel.innerHTML == "") {
+        inputLabel.innerHTML = "";
+    } else if (lastChild == "+") {
         inputLabel.innerHTML = inputLabel.innerHTML;
-    }else{
+    } else if (lastChild == "*") {
+        let DelString = inputLabel.innerHTML.substring(0, inputLength - 1);
+        inputLabel.innerHTML = DelString + buttonPlus;
+    } else if (lastChild == "-") {
+        let DelString = inputLabel.innerHTML.substring(0, inputLength - 1);
+        inputLabel.innerHTML = DelString + buttonPlus;
+    } else if (lastChild == "/") {
+        let DelString = inputLabel.innerHTML.substring(0, inputLength - 1);
+        inputLabel.innerHTML = DelString + buttonPlus;
+    } else if (lastChild == ".") {
+        inputLabel.innerHTML = inputLabel.innerHTML;
+    } else {
         inputLabel.innerHTML += buttonPlus;
     }
 }
@@ -92,9 +132,9 @@ function buttonDot() {
     let inputLabel = document.getElementById("inputLabel");
     let inputLength = inputLabel.innerHTML.length;
     let lastChild = inputLabel.innerHTML.charAt(inputLength - 1);
-    if(lastChild == "."){
+    if (lastChild == ".") {
         inputLabel.innerHTML = inputLabel.innerHTML;
-    }else{
+    } else {
         inputLabel.innerHTML += buttonDot;
     }
 }
@@ -103,23 +143,37 @@ function buttonDiv() {
     let inputLabel = document.getElementById("inputLabel");
     let inputLength = inputLabel.innerHTML.length;
     let lastChild = inputLabel.innerHTML.charAt(inputLength - 1);
-    if(lastChild == "/"){
+    if (inputLabel.innerHTML == "") {
+        inputLabel.innerHTML = "";
+    } else if (lastChild == "/") {
         inputLabel.innerHTML = inputLabel.innerHTML;
-    }else{
+    } else if (lastChild == "*") {
+        let DelString = inputLabel.innerHTML.substring(0, inputLength - 1);
+        inputLabel.innerHTML = DelString + buttonDiv;
+    } else if (lastChild == "+") {
+        let DelString = inputLabel.innerHTML.substring(0, inputLength - 1);
+        inputLabel.innerHTML = DelString + buttonDiv;
+    } else if (lastChild == "-") {
+        let DelString = inputLabel.innerHTML.substring(0, inputLength - 1);
+        inputLabel.innerHTML = DelString + buttonDiv;
+    } else if (lastChild == ".") {
+        inputLabel.innerHTML = inputLabel.innerHTML;
+    }
+    else {
         inputLabel.innerHTML += buttonDiv;
     }
 }
 function buttonAssign() {
     let inputLabel = document.getElementById("inputLabel");
-    if(inputLabel.innerHTML == "") {
+    if (inputLabel.innerHTML == "") {
         inputLabel.innerHTML = "";
-    }else{
+    } else {
         inputLabel.innerHTML = eval(inputLabel.innerHTML);
     }
 }
-function buttonDel(){
+function buttonDel() {
     let inputLabel = document.getElementById("inputLabel");
     let inputLength = inputLabel.innerHTML.length;
-    let DelString = inputLabel.innerHTML.substring(0,inputLength - 1);
+    let DelString = inputLabel.innerHTML.substring(0, inputLength - 1);
     inputLabel.innerHTML = DelString;
 }
